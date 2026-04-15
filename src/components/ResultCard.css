@@ -1,0 +1,237 @@
+/* ── Result Card ──────────────────────────────────────────── */
+
+.result-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 20px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.result-card {
+  width: 100%;
+  max-width: 620px;
+  background: var(--bg-card);
+  border: 1px solid rgba(var(--type-color-rgb, 99, 102, 241), 0.2);
+  border-radius: 24px;
+  padding: 44px 40px;
+  box-shadow: var(--shadow), 0 0 60px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+  animation: scaleIn 0.55s cubic-bezier(0.34, 1.4, 0.64, 1) both;
+  /* Use type-specific border tint via CSS custom property */
+  border-color: color-mix(in srgb, var(--type-color) 30%, transparent);
+}
+
+/* Top accent gradient bar */
+.result-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--type-color), color-mix(in srgb, var(--type-color) 40%, #a855f7));
+  border-radius: 24px 24px 0 0;
+}
+
+/* Ambient glow at top right */
+.result-card__glow {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, color-mix(in srgb, var(--type-color) 25%, transparent) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+/* Top section */
+.result-card__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+/* Emoji */
+.result-card__emoji-wrap {
+  width: 88px;
+  height: 88px;
+  background: color-mix(in srgb, var(--type-color) 15%, transparent);
+  border: 2px solid color-mix(in srgb, var(--type-color) 30%, transparent);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  animation: bounceIn 0.7s cubic-bezier(0.34, 1.6, 0.64, 1) 0.2s both;
+}
+.result-card__emoji {
+  font-size: 2.8rem;
+  line-height: 1;
+}
+
+/* Tie badge */
+.result-card__tie-badge {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  background: rgba(99,102,241,0.08);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+}
+
+/* Eyebrow */
+.result-card__eyebrow {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* Title */
+.result-card__title {
+  font-size: clamp(1.7rem, 5vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--type-color);
+  filter: brightness(1.15);
+}
+
+/* One-liner */
+.result-card__oneliner {
+  background: color-mix(in srgb, var(--type-color) 7%, transparent);
+  border-left: 3px solid var(--type-color);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 14px 18px;
+  font-size: 0.97rem;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.55;
+  margin-bottom: 24px;
+  font-family: var(--font-mono);
+  position: relative;
+}
+.result-card__quote {
+  color: var(--type-color);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+/* Description */
+.result-card__description {
+  font-size: 0.95rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+/* Traits */
+.result-card__traits-section {
+  margin-bottom: 28px;
+}
+.result-card__traits-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.result-card__traits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.trait-chip {
+  padding: 5px 13px;
+  background: color-mix(in srgb, var(--type-color) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--type-color) 25%, transparent);
+  border-radius: 20px;
+  font-size: 0.82rem;
+  color: var(--type-color);
+  filter: brightness(1.2);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* Share section */
+.result-card__share {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 28px;
+}
+.result-card__share-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.result-card__share-box {
+  margin-bottom: 14px;
+}
+.result-card__share-text {
+  font-size: 0.9rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.result-card__share-text strong { color: var(--type-color); filter: brightness(1.1); }
+.result-card__share-sub {
+  font-size: 0.82rem;
+  color: var(--text-2);
+  font-style: italic;
+}
+
+/* Copy button */
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border-hover);
+  background: transparent;
+  color: var(--text-2);
+  font-size: 0.83rem;
+  font-family: var(--font);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.18s var(--ease);
+}
+.copy-btn:hover {
+  border-color: var(--accent-light);
+  color: var(--accent-light);
+  background: rgba(99,102,241,0.06);
+}
+.copy-btn--done {
+  border-color: #10b981;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.06);
+}
+
+/* Restart */
+.result-card__restart {
+  display: flex;
+  justify-content: center;
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 540px) {
+  .result-wrapper { padding: 28px 16px 60px; }
+  .result-card { padding: 28px 20px; }
+  .result-card__emoji-wrap { width: 72px; height: 72px; border-radius: 18px; }
+  .result-card__emoji { font-size: 2.2rem; }
+}

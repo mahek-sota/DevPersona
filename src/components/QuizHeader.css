@@ -1,0 +1,31 @@
+.quiz-header {
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 0 0;
+  animation: fadeIn 0.4s var(--ease) both;
+}
+
+.quiz-header__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quiz-header__icon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.quiz-header__name {
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.01em;
+}

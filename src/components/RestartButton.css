@@ -1,0 +1,27 @@
+.restart-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  border-radius: 50px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+}
+.restart-btn:hover {
+  border-color: var(--border-hover);
+  color: var(--text-2);
+  background: rgba(99, 102, 241, 0.04);
+}
+.restart-btn:hover svg {
+  animation: spinOnce 0.45s var(--ease);
+}
+@keyframes spinOnce {
+  from { transform: rotate(-30deg); }
+  to   { transform: rotate(330deg); }
+}

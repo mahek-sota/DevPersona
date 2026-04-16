@@ -22,7 +22,7 @@ export default function QuizLanding({ onStart }) {
         {/* Badge */}
         <div className="landing-badge">
           <span className="landing-badge__dot" />
-          12 questions · 8 archetypes · 1 honest result
+          10 questions · 8 archetypes · 1 honest result
         </div>
 
         {/* Title */}

@@ -136,7 +136,7 @@ export const questions = [
       {
         id: '6a',
         text: "One neat box with clean internal layers and clear labels.",
-        scores: { monolith: 2, zen: 2 }
+        scores: { monolith: 2, zen: 1 }
       },
       {
         id: '6b',
@@ -145,8 +145,8 @@ export const questions = [
       },
       {
         id: '6c',
-        text: "Twenty boxes, event streams, queues, a mesh, and a gateway. Art.",
-        scores: { overengineering: 3, microservices: 1 }
+        text: "A handful of services, maybe a queue or two, and clear interactions. Just enough complexity.",
+        scores: { microservices: 2, modular: 1 }
       },
       {
         id: '6d',
@@ -219,7 +219,7 @@ export const questions = [
       {
         id: '9b',
         text: "The structure. I want clear boundaries and clean responsibilities.",
-        scores: { modular: 2, zen: 1 }
+        scores: { modular: 2, detective: 1 }
       },
       {
         id: '9c',
@@ -240,7 +240,7 @@ export const questions = [
       {
         id: '10a',
         text: "When the current setup clearly can’t do the job anymore.",
-        scores: { zen: 2, monolith: 1 }
+        scores: { monolith: 2, zen: 1 }
       },
       {
         id: '10b',
@@ -266,7 +266,7 @@ export const questions = [
       {
         id: '11a',
         text: "Let’s keep this simple.",
-        scores: { monolith: 2, zen: 2 }
+        scores: { monolith: 2, zen: 1 }
       },
       {
         id: '11b',
@@ -292,7 +292,7 @@ export const questions = [
       {
         id: '12a',
         text: "Clarity. I want to understand it fully, especially when something breaks.",
-        scores: { monolith: 2, zen: 2 }
+        scores: { monolith: 2, zen: 1 }
       },
       {
         id: '12b',
